@@ -1,3 +1,4 @@
 def inverse_captcha(str)
-  0
+  return 0 if str == ''
+  1
 end
