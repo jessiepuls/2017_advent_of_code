@@ -23,5 +23,10 @@ describe 'corruption checksum' do
       input = "5 1 9 5\n7 5 3\n2 4 6 8"
       expect(corruption_checksum.checksum(input)).to be 18
     end
+
+    it 'should return a sum of each row val' do
+      input = "5 1 9 5\n7 5 2\n1 4 6 8"
+      expect(corruption_checksum.checksum(input)).to be 20
+    end
   end
 end

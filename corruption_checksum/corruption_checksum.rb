@@ -1,6 +1,7 @@
 class CorruptionChecksum
   def checksum(input)
-    18
+    tokenized_input = input.split("\n")
+    tokenized_input.map { |row| row_val(row) }.sum
   end
 
   def row_val(input)
