@@ -19,8 +19,12 @@ describe 'corruption checksum' do
   end
 
   context 'divide' do
-    it 'sho uld return 4 for an input of 5 9 2 8' do
+    it 'should return 4 for an input of 5 9 2 8' do
       expect(CorruptionChecksum.divide('5 9 2 8')).to be 4
+    end
+
+    it 'should return 3 for an input of 9 4 7 3' do
+      expect(CorruptionChecksum.divide('9 4 7 3')).to be 3
     end
   end
 
